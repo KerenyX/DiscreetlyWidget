@@ -105,7 +105,8 @@ function createWidgetHtml() {
                         "<p> סגירת הצ'אט תמחק את כל ההודעות.<br></br> פתיחה מחדש תתחיל צ'אט עם נציג אחר." +
                         '</p><br>' +
                         '<p> אחד הנציגים שלנו יהיה איתך בקרוב.<br> בינתיים, כמה מקורות רלוונטיים:<br><br>' +
-                            '<iframe width="290"></iframe>' +
+                        '<iframe width="290" src="https://www.youtube.com/embed/wpZy4I0Meho" frameborder="0"' +
+                            'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
                         '</p>' +
                         '<span id="chat-start-time" class="chat-started-text time-general"></span>' +
                         '<p class="chat-started-text">שלום. אני מתנדב/ת ממרכז הסיוע. אפשר להתחיל לשוחח</p>' +
@@ -159,8 +160,3 @@ function createWidgetHtml() {
     var chatContainer = document.getElementById("discreetly-chat-widget-container");
     chatContainer.innerHTML = chatHtml;
 }
-
-// '<p> אחד הנציגים שלנו יהיה איתך בקרוב.<br> בינתיים, כמה מקורות רלוונטיים:<br><br>' +
-// '<iframe width="290" src="https://www.youtube.com/embed/wpZy4I0Meho" frameborder="0"' +
-//     'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
-// '</p>' +
