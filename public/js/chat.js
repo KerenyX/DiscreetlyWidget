@@ -203,7 +203,7 @@ $("#open-chat-button").click(() => {
         timer: 2000
     });
 
-    const socket = io('https://discreetly-widget.herokuapp.com', {query: `ipAddress=${ipAddress}`});
+    const socket = io('https://discreetly-test.herokuapp.com', {query: `ipAddress=${ipAddress}`});
 
     chat = new Chat(socket); 
     chat.openChat();
