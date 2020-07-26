@@ -43,9 +43,9 @@
 })(); // We call our anonymous function immediately
 
 function loadStyleFiles() {
-    loadStylesheet("http://localhost:3000/css/style.css");
-    loadStylesheet("http://localhost:3000/css/shared.css");
-    loadStylesheet("http://localhost:3000/css/tooltipster.bundle.min.css");
+    loadStylesheet("https://discreetly-widget.herokuapp.com/css/style.css");
+    loadStylesheet("https://discreetly-widget.herokuapp.com/css/shared.css");
+    loadStylesheet("https://discreetly-widget.herokuapp.com/css/tooltipster.bundle.min.css");
     loadStylesheet("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 }
 
@@ -53,10 +53,10 @@ function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
     loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js");
     loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js");
-    loadJsScript("http://localhost:3000/js/datetimeHelper.js");
-    loadJsScript("http://localhost:3000/socket.io/socket.io.js");
-    loadJsScript("http://localhost:3000/js/tooltipster.bundle.min.js");
-    loadJsScript("http://localhost:3000/js/chat.js");
+    loadJsScript("https://discreetly-widget.herokuapp.com/js/datetimeHelper.js");
+    loadJsScript("https://discreetly-widget.herokuapp.com/socket.io/socket.io.js");
+    loadJsScript("https://discreetly-widget.herokuapp.com/js/tooltipster.bundle.min.js");
+    loadJsScript("https://discreetly-widget.herokuapp.com/js/chat.js");
 }
 
 function loadStylesheet(url) {
