@@ -428,3 +428,41 @@ ul#chat-history li.in {
     color: #434343;
 }
 /* #endregion Landing Page */
+
+/* #region Shared */
+.flex {
+    display: flex;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.none {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.white {
+    color: white;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.button-color-disabled {
+    color: #d4d4d4;
+}
+
+.button-color-enabled {
+    color: #6C6D6F;
+}
+/* #endregion Shared */
