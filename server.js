@@ -29,29 +29,23 @@ app.use('', viewRoutes);
 app.use('/api/logs', logsRouter);
 
 io.on('connection', (socket) => {
-    const ipAddress = socket.handshake.query.ipAddress;
-
-    // if (ipAddress) {
-    //     const region = addressController.getPhysicalAddressByIp(socket.id, ipAddress);
-    // }
-
-    logsController.logMessage(1, socket.id, ipAddress, `User sent a request to connect`);
-    outChatController.sendMessageToServer(socket.id, ipAddress, "start", "");
+    logsController.logMessage(1, socket.id, 0, `User sent a request to connect`);
+    outChatController.sendMessageToServer(socket.id, 0, "start", "");
 
     socket.on('out chat message', (msg) => {
-        logsController.logMessage(5, socket.id, ipAddress, `User asked to send a message: ${msg}`);
-        outChatController.sendMessageToServer(socket.id, ipAddress, "text", msg);
+        logsController.logMessage(5, socket.id, 0, `User asked to send a message: ${msg}`);
+        outChatController.sendMessageToServer(socket.id, 0, "text", msg);
         socket.emit('out chat message', msg); /* Show the user what the message was */
     });
 
     socket.on('disconnect', () => {
-        logsController.logMessage(2, socket.id, ipAddress, `User sent a request to disconnect`);
-        outChatController.sendMessageToServer(socket.id, ipAddress, "end", "");
+        logsController.logMessage(2, socket.id, 0, `User sent a request to disconnect`);
+        outChatController.sendMessageToServer(socket.id, 0, "end", "");
         socket.disconnect();
     });
 
     socket.on('user is typing', () => {
-        outChatController.sendMessageToServer(socket.id, ipAddress, "typing", "");
+        outChatController.sendMessageToServer(socket.id, 0, "typing", "");
     });
 });
 

@@ -190,11 +190,6 @@ class Chat {
 $("#open-chat-button").click(() => {
     const israelTimezoneStr = getIsraelTimezoneStr();
     moment.tz.add(israelTimezoneStr);
-    
-    let ipAddress = "";
-    $.getJSON('https://ipapi.co/json/', res => {
-        ipAddress = res.ip;
-    });
 
     $('.tooltip').tooltipster({
         animation: 'grow',
@@ -203,7 +198,7 @@ $("#open-chat-button").click(() => {
         timer: 2000
     });
 
-    const socket = io('https://discreetly-test.herokuapp.com', {query: `ipAddress=${ipAddress}`});
+    const socket = io('https://discreetly-test.herokuapp.com');
 
     chat = new Chat(socket); 
     chat.openChat();
