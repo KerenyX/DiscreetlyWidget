@@ -14,10 +14,10 @@ outChatController = {
         })
         .then(response => {
             const eventId = getEventIdFromEventStr(eventType);
-            logsController.logMessage(eventId, socketId, ipAddress, `Event (${eventType}) sent to server: ${message}`);
+            logsController.logMessage(eventId, socketId, ipAddress, `Event (${eventType}) sent to server`);
         })
         .catch(error => {
-            logsController.logMessage(6, socketId, ipAddress, `(${eventType}) Error sending msg to server: ${error}`);
+            logsController.logMessage(6, socketId, ipAddress, `(${eventType}) Error sending msg to server. ${error}`);
         })
         .finally(() => {
             return socketId;

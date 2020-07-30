@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
     outChatController.sendMessageToServer(socket.id, 0, "start", "");
 
     socket.on('out chat message', (msg) => {
-        logsController.logMessage(5, socket.id, 0, `User asked to send a message: ${msg}`);
+        logsController.logMessage(5, socket.id, 0, `User asked to send a message`);
         outChatController.sendMessageToServer(socket.id, 0, "text", msg);
         socket.emit('out chat message', msg); /* Show the user what the message was */
     });

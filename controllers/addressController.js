@@ -9,7 +9,7 @@ addressController = {
             const geoData = geoip.lookup(ipAddress);
             region = geoData ? geoData.region : "";
         } catch(error) {
-            logsController.logMessage(6, userId, ipAddress, `Error getting the physical address from ip: ${error}`);
+            logsController.logMessage(6, userId, ipAddress, `Error getting the physical address from ip. ${error}`);
         }
         
         return region;

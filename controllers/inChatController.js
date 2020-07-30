@@ -35,7 +35,7 @@ inChatController = {
             }
 
             if (eventNum) {
-                logsController.logMessage(eventNum, userId, "0", `(${eventName}): ${text}`);
+                logsController.logMessage(eventNum, userId, "0", `(${eventName})`);
             }
 
             if (eventNum && eventNum != 6) {
