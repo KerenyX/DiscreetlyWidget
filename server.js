@@ -6,7 +6,6 @@ const io = require('socket.io')(server);
 const inChatController = require('./controllers/inChatController.js');
 const logsController = require('./controllers/logsController.js');
 const outChatController = require('./controllers/outChatController.js');
-// const addressController = require('./controllers/addressController.js');
 const port = process.env.PORT || 3000;
 
 app.use(express.json());

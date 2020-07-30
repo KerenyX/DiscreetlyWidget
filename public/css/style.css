@@ -1,25 +1,6 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-}
-
-header, main, footer, nav, aside, section, div  {
-    display: block;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* #region Before Chat */
-#wrapper {
-    background-image: url("../images/main-background.png");
-    background-repeat: no-repeat; 
-    background-size: cover;
-    height: 100vh;
-}
-
 #chat-container {
+    font-family: Arial, Helvetica, sans-serif;
     height: 540px;
     width: 338px;
     border-radius: 10px;
@@ -112,6 +93,7 @@ body {
 }
 
 #header-text {
+    margin-top: 0px;
     margin-left: 13px;
     font-size: 14px;
     line-height: 22px;
@@ -172,6 +154,8 @@ body {
 }
 
 #chat-container > #chat-body #chat-main > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: #6C6D6F;
     font-size: 12px;
     line-height: 14px;
