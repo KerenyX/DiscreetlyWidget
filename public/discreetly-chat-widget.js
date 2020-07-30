@@ -13,11 +13,8 @@ function loadStyleFiles() {
 
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
-    loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js");
-    loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js");
     loadJsScript(`${domain}/socket.io/socket.io.js`);
     loadJsScript(`${domain}/js/chat.js`);
-    loadJsScript(`${domain}/js/tooltipster.bundle.min.js`);
 }
 
 function loadStylesheet(url) {
