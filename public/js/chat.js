@@ -200,7 +200,7 @@ document.getElementById("open-chat-button").onclick = () => {
         timer: 2000
     });
 
-    const socket = io('https://discreetly-test.herokuapp.com');
+    const socket = io('https://discreetly-chat-11.herokuapp.com/');
 
     chat = new Chat(socket); 
     chat.openChat();
