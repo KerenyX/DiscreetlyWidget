@@ -187,7 +187,7 @@ class Chat {
     }
 }
 
-$("#open-chat-button").click(() => {
+document.getElementById("open-chat-button").onclick = () => {
     const israelTimezoneStr = getIsraelTimezoneStr();
     moment.tz.add(israelTimezoneStr);
 
@@ -262,7 +262,7 @@ $("#open-chat-button").click(() => {
     chat.socket.on('volunteer is typing', (msg) => {
         chat.showTypingMessage();
     });
-});
+};
 
 function convertToTimezone(time) {
     const convertedTimezone = moment.tz(time, "Asia/Jerusalem");

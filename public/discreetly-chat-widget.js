@@ -1,60 +1,22 @@
-(function() {
-    let jQuery; // Localize jQuery variable
-
-    /******** Load jQuery if not present *********/
-    if (window.jQuery === undefined || window.jQuery.fn.jquery !== '3.5.1') {
-        var script_tag = document.createElement('script');
-        script_tag.setAttribute("type","text/javascript");
-        script_tag.setAttribute("src", "https://code.jquery.com/jquery-3.5.1.min.js");
-
-        if (script_tag.readyState) {
-            script_tag.onreadystatechange = function () { // For old versions of IE
-            if (this.readyState == 'complete' || this.readyState == 'loaded') {
-                scriptLoadHandler();
-            }};
-        } else { // Other browsers
-            script_tag.onload = scriptLoadHandler;
-        }
-
-        // Try to find the head, otherwise default to the documentElement
-        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
-    } else {
-        // The jQuery version on the window is the one we want to use
-        jQuery = window.jQuery;
-        main();
-    }
-
-    /******** Called once jQuery has loaded ******/
-    function scriptLoadHandler() {
-        // Restore $ and window.jQuery to their previous values and store the
-        // new jQuery in our local jQuery variable
-        jQuery = window.jQuery.noConflict(true);
-        main(); // Call our main function
-    }
-
-    /******** Our main function ********/
-    function main() { 
-        jQuery(document).ready(function($) { 
-            loadStyleFiles();
-            createWidgetHtml();
-            loadJsFiles();
-        });
-    }
-})(); // We call our anonymous function immediately
+window.onload = () => {
+    loadJsFiles();
+    loadStyleFiles();
+    createWidgetHtml();
+};
 
 function loadStyleFiles() {
-    loadStylesheet("https://discreetly-test.herokuapp.com/css/style.css");
-    loadStylesheet("https://discreetly-test.herokuapp.com/css/tooltipster.bundle.min.css");
+    loadStylesheet("https://discreetly-test.herokuapp.com//css/tooltipster.bundle.min.css");
     loadStylesheet("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+    loadStylesheet("https://discreetly-test.herokuapp.com//css/style.css");
 }
 
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
     loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js");
     loadJsScript("https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js");
-    loadJsScript("https://discreetly-test.herokuapp.com/socket.io/socket.io.js");
-    loadJsScript("https://discreetly-test.herokuapp.com/js/tooltipster.bundle.min.js");
-    loadJsScript("https://discreetly-test.herokuapp.com/js/chat.js");
+    loadJsScript("https://discreetly-test.herokuapp.com//socket.io/socket.io.js");
+    loadJsScript("https://discreetly-test.herokuapp.com//js/chat.js");
+    loadJsScript("https://discreetly-test.herokuapp.com//js/tooltipster.bundle.min.js");
 }
 
 function loadStylesheet(url) {
