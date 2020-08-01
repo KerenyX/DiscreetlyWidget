@@ -450,3 +450,11 @@ ul#chat-history li.in {
     color: #6C6D6F;
 }
 /* #endregion Shared */
+
+@media (max-width: 600px) {
+    #chat-container {
+        margin-top: calc((100vh - 540px)/2);
+        right: calc((100vw - 338px)/2);
+        bottom: initial;
+    }
+}
