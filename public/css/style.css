@@ -7,6 +7,7 @@
     right: 50px;
     bottom: 10px;
     direction: ltr; /* Fix */
+    z-index: 100;
 }
 
 #chat-container > .chat-overlay {
@@ -254,6 +255,7 @@ ul#chat-history li.in {
     outline: none;
     border: none;
     color: #6C6D6FCC;
+    box-shadow: none;
 }
 
 #chat-message-container input#chat-message:focus {
