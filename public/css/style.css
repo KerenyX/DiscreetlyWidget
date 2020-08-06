@@ -6,6 +6,7 @@
     border-radius: 10px;
     right: 50px;
     bottom: 10px;
+    direction: ltr; /* Fix */
 }
 
 #chat-container > .chat-overlay {
@@ -197,6 +198,7 @@ ul#chat-history li.time-out {
     font-size: 10px;
     clear: both;
     color: #6C6D6F;
+    background-image: none;
 }
 
 ul#chat-history li.time-in {
