@@ -163,14 +163,10 @@ class Chat {
         }
     }
     playIncomingMsgSound() {
-        try {
-            const mp3Source = `<source src="../audio/when.mp3" type="audio/mpeg">`;
-            const oggSource = `<source src="../audio/when.ogg" type="audio/ogg">`;
-            const embedSource = '<embed hidden="true" autostart="true" loop="false" src="audio/when.mp3">';
-            document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + '</audio>';
-        } catch {
-            console.log("Can't play the sound");
-        }
+        const mp3Source = `<source src="https://discreetly-chat-11.herokuapp.com/audio/when.mp3" type="audio/mpeg">`;
+        const oggSource = `<source src="https://discreetly-chat-11.herokuapp.com/audio/when.ogg" type="audio/ogg">`;
+        const embedSource = '<embed hidden="true" autostart="true" loop="false" src="audio/when.mp3">';
+        document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + '</audio>';
     }
 }
 

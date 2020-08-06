@@ -189,6 +189,7 @@ ul#chat-history li.out {
     font-size: 14px;
     clear: both;
     color: #6C6D6F;
+    background-image: none;
 }
 
 ul#chat-history li.time-in,
@@ -253,6 +254,10 @@ ul#chat-history li.in {
     color: #6C6D6FCC;
 }
 
+#chat-message-container input#chat-message:focus {
+    outline: none;
+}
+
 #chat-message-container input#chat-message::placeholder,
 #chat-message-container input#chat-message::-webkit-input-placeholder {
     font-style: italic;
@@ -265,7 +270,7 @@ ul#chat-history li.in {
 /* #endregion Chat Message */
 
 /* #region Tooltipster */
-.tooltipster-box {
+/* .tooltipster-box {
     width: 175px;
     border: 2px solid #6426987a !important;
     background: #EEEEEE !important;
@@ -284,7 +289,7 @@ ul#chat-history li.in {
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
     border-top-color: #EEEEEE !important;
-}
+} */
 /* #endregion Tooltipster */
 
 /* #region Chat Menu */
