@@ -304,6 +304,7 @@ ul#chat-history li.in {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    justify-content: flex-end;
 }
 
 #menu-container #menu-content article {
@@ -311,8 +312,8 @@ ul#chat-history li.in {
     cursor: pointer;
 }
 
-#menu-container #menu-content article:not(:last-child) {
-    border-right: 1px solid #C5C5C5;
+#menu-container #menu-content article { /* :not(:last-child) */
+    border-left: 1px solid #C5C5C5;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
