@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, {
+    pingInterval: 300000,
+    pingTimeout: 300000
+});
 
 const inChatController = require('./controllers/inChatController.js');
 const logsController = require('./controllers/logsController.js');
