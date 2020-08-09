@@ -159,7 +159,7 @@ class Chat {
         } else {
             $("#menu-volume .fa-volume-off").css("display", "none");
             $("#menu-volume .fa-volume-up").css("display", "inline-block");
-            $("#menu-volume p").text("הפעלת התראות");
+            $("#menu-volume p").text("تفعيل التنبيهات");
         }
     }
     playIncomingMsgSound() {
@@ -257,7 +257,7 @@ function createWidgetHtml() {
             '<section id="chat-header" class="full-width">' +
                 '<div class="flex">' +
                     '<i class="fa fa-comment-o white"></i>' +
-                    '<p id="header-text" class="rtl">מתחבר...</p>' +
+                    '<p id="header-text" class="rtl">توصيل...</p>' +
                 '</div>' +
                 '<div>' +
                     '<i class="fa fa-chevron-down pointer white"></i>' +
@@ -278,7 +278,7 @@ function createWidgetHtml() {
                         '<ul id="chat-history"></ul>' +
                     '</div>' +
                     '<div id="waiting-msg">' +
-                        '<p>...הנציג/ה מקליד/ה</p>' +
+                        '<p>...أنواع الممثل</p>' +
                     '</div>' +
                 '</section>' +
                 '<section id="chat-message-container" class="full-width">' +
