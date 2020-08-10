@@ -173,18 +173,14 @@ class Chat {
 document.getElementById("open-chat-button").onclick = () => {
     createWidgetHtml();
 
-    const socket = io('https://discreetly-chat-11.herokuapp.com', { 
+    const socket = io('https://discreetly-chat-11.herokuapp.com', {
         reconnection: false,
-        timeout: 300000
+        pingTimeout: 300000
     });
-
-    // socket.eio.pingInterval = 5000;
     
     socket.on('disconnect', () => {
-        console.log("client disconnect");
+        chat.chatEnded();
     });
-
-    ///////////////////////////////////////////
 
     chat = new Chat(socket); 
     chat.openChat();
