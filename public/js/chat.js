@@ -1,3 +1,5 @@
+const env = require('../environment/environment').env();
+
 class Chat {
     constructor(socket) {
         this.socket = socket;
@@ -173,7 +175,7 @@ class Chat {
 document.getElementById("open-chat-button").onclick = () => {
     createWidgetHtml();
 
-    const socket = io('https://discreetly-chat-11.herokuapp.com', {
+    const socket = io(env.SOCKET, {
         reconnection: false,
         pingTimeout: 300000
     });

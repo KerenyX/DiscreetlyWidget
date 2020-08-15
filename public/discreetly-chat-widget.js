@@ -1,4 +1,5 @@
-var domain = "https://discreetly-chat-11.herokuapp.com";
+const env = require('../environment/environment').env();
+var domain = env.DOMAIN;
 
 window.onload = () => {
     loadJsFiles();
