@@ -1,4 +1,4 @@
-var domain = "https://discreetly-chat-11.herokuapp.com";
+var domain = "http://localhost:3000"; 
 
 window.onload = () => {
     loadJsFiles();
