@@ -92,7 +92,7 @@ class Chat {
         /* Enable the chat message buttons */
         $("#chat-form .fa-plus").addClass("pointer");
         $("#chat-form .fa-arrow-right").addClass("pointer");
-        $('#header-text').text('وكيل');
+        $('#header-text').text('נציג/ה');
     }
     chatEnded() {
         this.chatDisabled = true;
@@ -108,7 +108,7 @@ class Chat {
             this.playIncomingMsgSound();
         }
 
-        let writer = type == "in" ? "وكيل" : "أنا";
+        let writer = type == "in" ? "נציג/ה" : "אני";
         let timeClassName = type == "in" ? "time-in" : "time-out";
         const time = getCurrentIsraelTime();
 
@@ -155,11 +155,11 @@ class Chat {
         if (this.volume) {
             $("#menu-volume .fa-volume-off").css("display", "inline-block");
             $("#menu-volume .fa-volume-up").css("display", "none");
-            $("#menu-volume p").text("كتم التنبيهات");
+            $("#menu-volume p").text("השתקת התראות");
         } else {
             $("#menu-volume .fa-volume-off").css("display", "none");
             $("#menu-volume .fa-volume-up").css("display", "inline-block");
-            $("#menu-volume p").text("تفعيل التنبيهات");
+            $("#menu-volume p").text("הפעלת התראות");
         }
     }
     playIncomingMsgSound() {
@@ -258,13 +258,13 @@ function createWidgetHtml() {
             '<div id="sound"></div>' +
             '<section id="chat-ended-overlay" class="chat-overlay none full-width">' +
                 '<div id="chat-ended-button">' +
-                    "<p> انتهت المكالمة<br> انقر لإغلاق الدردشة</p>" +
+                    "<p>השיחה הסתיימה<br> לחץ כדי לסגור את הצ'אט</p>" +
                 '</div>' +
             '</section>' +
             '<section id="chat-header" class="full-width">' +
                 '<div class="flex">' +
                     '<i class="fa fa-comment-o white"></i>' +
-                    '<p id="header-text" class="rtl">توصيل...</p>' +
+                    '<p id="header-text" class="rtl">מתחבר...</p>' +
                 '</div>' +
                 '<div>' +
                     '<i class="fa fa-chevron-down pointer white"></i>' +
@@ -276,16 +276,16 @@ function createWidgetHtml() {
                 '<section id="chat-content">' +
                     '<div id="chat-main" class="rtl">' +
                         '<span id="welcome-time" class="time-general"></span>' +
-                        "<p> سيؤدي إغلاق المحادثة إلى حذف جميع الرسائل.<br></br> ستبدأ إعادة الفتح محادثة مع مندوب آخر." +
+                        "<p>סגירת הצ'אט תמחק את כל ההודעות.<br></br>פתיחה מחדש תתחיל צ'אט עם נציג אחר." +
                         '</p><br>' +
-                        '<p> أحد ممثلينا سيكون معك قريبا.<br>' +
+                        '<p>אחד הנציגים שלנו יהיה איתך בקרוב.<br>' +
                         '</p>' +
                         '<span id="chat-start-time" class="chat-started-text time-general"></span>' +
-                        '<p class="chat-started-text">مرحبًا ، أنا متطوع من مركز المساعدة. يمكنك بدء الدردشة</p>' +
+                        '<p class="chat-started-text">שלום, אני מתנדב/ת ממרכז הסיוע. אפשר להתחיל לשוחח</p>' +
                         '<ul id="chat-history"></ul>' +
                     '</div>' +
                     '<div id="waiting-msg">' +
-                        '<p>...أنواع الممثل</p>' +
+                        '<p>הנציג/ה מקליד/ה...</p>' +
                     '</div>' +
                 '</section>' +
                 '<section id="chat-message-container" class="full-width">' +
@@ -293,7 +293,7 @@ function createWidgetHtml() {
                         '<i class="fa fa-plus fa-lg button-color-disabled"></i>' +
                         '<i class="fa fa-times fa-lg pointer button-color-enabled none"></i>' +
         
-                        '<input id="chat-message" class="rtl" autocomplete="off" placeholder="اكتب النص هنا""/>' +
+                        '<input id="chat-message" class="rtl" autocomplete="off" placeholder="הקלד/י טקסט כאן""/>' +
                         '<i class="fa fa-arrow-right fa-lg button-color-disabled""></i>' +
                     '</form>' +
                 '</section>' +
@@ -301,14 +301,14 @@ function createWidgetHtml() {
                     '<div id="menu-content" class="flex">' +
                         '<article id="menu-end-conversation">' +
                             '<div><i class="fa fa-ban fa-lg"></i></div>' +
-                            '<p>إنهاء المكالمة</p>' +
+                            '<p>סיום שיחה</p>' +
                         '</article>' +
                         '<article id="menu-volume">' +
                             '<div>' +
                                 '<i class="fa fa-volume-off fa-lg"></i>' +
                                 '<i class="fa fa-volume-up fa-lg none"></i>' +
                             '</div>' +
-                            '<p>كتم التنبيهات</p>' +
+                            '<p>השתקת התראות</p>' +
                         '</article>' +
                     '</div>' +
                     '<div id="menu-footer">' +
