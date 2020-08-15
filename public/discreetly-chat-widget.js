@@ -1,4 +1,4 @@
-var domain = "https://discreetly-chat-11.herokuapp.com";
+var domain = "https://discreetly-test.herokuapp.com";
 
 window.onload = () => {
     loadJsFiles();
