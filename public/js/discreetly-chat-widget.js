@@ -4,9 +4,8 @@ window.onload = () => {
 };
 
 function loadStyleFiles() {
-    loadStylesheet(`${process.env.DOMAIN}/css/tooltipster.bundle.min.css`);
     loadStylesheet("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-    loadStylesheet(`${process.env.DOMAIN}/css/style.css`);
+    loadStylesheet(`${process.env.DOMAIN}/css/style.min.css`);
 }
 
 function loadJsFiles() {

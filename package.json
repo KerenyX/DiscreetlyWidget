@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack" : "webpack",
+    "webpack": "webpack",
     "dev": "nodemon run webpack -- --mode development --watch",
-    "prod": "npm run webpack -- --mode production",
+    "build": "npm run webpack -- --mode production",
     "heroku-postbuild": "webpack -p"
   },
   "author": "kerenyaakov5@gmail.com",
@@ -19,10 +19,14 @@
     "moment": "2.26.0",
     "moment-timezone": "0.5.31",
     "mongoose": "5.9.16",
+    "node-sass": "^4.14.1",
     "socket.io": "2.3.0"
   },
   "devDependencies": {
+    "file-loader": "^6.0.0",
     "nodemon": "2.0.4",
+    "sass": "1.26.10",
+    "sass-loader": "9.0.3",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12"
   }
