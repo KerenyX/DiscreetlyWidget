@@ -163,8 +163,8 @@ class Chat {
         }
     }
     playIncomingMsgSound() {
-        const mp3Source = `<source src="https://discreetly-chat-11.herokuapp.com/audio/when.mp3" type="audio/mpeg">`;
-        const oggSource = `<source src="https://discreetly-chat-11.herokuapp.com/audio/when.ogg" type="audio/ogg">`;
+        const mp3Source = `<source src="${process.env.DOMAIN}/audio/when.mp3" type="audio/mpeg">`;
+        const oggSource = `<source src="${process.env.DOMAIN}/audio/when.ogg" type="audio/ogg">`;
         const embedSource = '<embed hidden="true" autostart="true" loop="false" src="audio/when.mp3">';
         document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + '</audio>';
     }
@@ -173,7 +173,7 @@ class Chat {
 document.getElementById("open-chat-button").onclick = () => {
     createWidgetHtml();
 
-    const socket = io('http://localhost:3000', {
+    const socket = io(`${process.env.DOMAIN}`, {
         reconnection: false,
         pingTimeout: 300000
     });

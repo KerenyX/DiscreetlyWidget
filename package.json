@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "webpack" : "webpack",
+    "dev": "nodemon run webpack -- --mode development",
+    "prod": "npm run webpack -- --mode production"
   },
   "author": "kerenyaakov5@gmail.com",
   "license": "ISC",
@@ -20,6 +21,8 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

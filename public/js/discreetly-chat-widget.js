@@ -1,20 +1,18 @@
-var domain = "http://localhost:3000"; 
-
 window.onload = () => {
     loadJsFiles();
     loadStyleFiles();
 };
 
 function loadStyleFiles() {
-    loadStylesheet(`${domain}/css/tooltipster.bundle.min.css`);
+    loadStylesheet(`${process.env.DOMAIN}/css/tooltipster.bundle.min.css`);
     loadStylesheet("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-    loadStylesheet(`${domain}/css/style.css`);
+    loadStylesheet(`${process.env.DOMAIN}/css/style.css`);
 }
 
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
-    loadJsScript(`${domain}/socket.io/socket.io.js`);
-    loadJsScript(`${domain}/js/chat.js`);
+    loadJsScript(`${process.env.DOMAIN}/socket.io/socket.io.js`);
+    loadJsScript(`${process.env.DOMAIN}/chat.js`);
 }
 
 function loadStylesheet(url) {
