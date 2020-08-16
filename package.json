@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack" : "webpack",
-    "dev": "nodemon run webpack -- --mode development",
+    "dev": "nodemon run webpack -- --mode development --watch",
     "prod": "npm run webpack -- --mode production"
   },
   "author": "kerenyaakov5@gmail.com",

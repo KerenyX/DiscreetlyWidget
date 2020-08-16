@@ -5,7 +5,7 @@ const path = require('path');
 const parentPath = path.join(__dirname, '../', '/public/');
 
 viewRouter.get('/', (req, res) => {
-    res.sendFile(parentPath + 'index.html');
+    res.sendFile(parentPath + `${process.env.ENTRY_HTML}.html`);
 });
 viewRouter.get('/kolmila', (req, res) => {
     res.sendFile(parentPath + 'kolmila.html');
