@@ -13,7 +13,8 @@ module.exports = () => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        "process.env.DOMAIN": JSON.stringify(process.env.DOMAIN)
+        "process.env.DOMAIN": JSON.stringify(process.env.DOMAIN),
+        "process.env.LANGUAGE": JSON.stringify(process.env.LANGUAGE)
       })
     ]
   };
