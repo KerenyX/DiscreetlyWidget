@@ -3,7 +3,7 @@ const logsRouter = express.Router();
 const path = require('path');
 const logsController = require('../controllers/logsController.js');
 
-const parentPath = path.join(__dirname, '../', '/public/');
+const parentPath = path.join(__dirname, '../', '/public/html/');
 
 logsRouter.get('', (req, res) => {
     res.sendFile(parentPath + 'logs.html');
