@@ -171,7 +171,7 @@ class Chat {
 }
 
 document.getElementById("open-chat-button").onclick = () => {
-    loadChat();
+    loadChat();  
 };
 
 function getCurrentIsraelTime() {
