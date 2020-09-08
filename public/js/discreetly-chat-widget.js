@@ -10,8 +10,8 @@ function loadStyleFiles() {
 
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
-  //  loadJsScript("https://unpkg.com/i18next/i18next.js");
-  //  loadJsScript("https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js");
+    loadJsScript("https://unpkg.com/i18next/i18next.js");
+    loadJsScript("https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js");
     loadJsScript(`${process.env.DOMAIN}/socket.io/socket.io.js`);
     loadJsScript(`${process.env.DOMAIN}/chat.js`);
 }

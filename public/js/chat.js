@@ -92,7 +92,7 @@ class Chat {
         /* Enable the chat message buttons */
         $("#chat-form .fa-plus").addClass("pointer");
         $("#chat-form .fa-arrow-right").addClass("pointer");
-        $('#header-text').text("وكيل");
+        $('#header-text').text(`${i18next.t('vol')}`);
     }
     chatEnded() {
         this.chatDisabled = true;
@@ -108,7 +108,7 @@ class Chat {
             this.playIncomingMsgSound();
         }
 
-        let writer = type == "in" ? "وكيل" : "أنا";
+        let writer = type == "in" ? `${i18next.t('vol')}` : `${i18next.t('me')}`;
         let timeClassName = type == "in" ? "time-in" : "time-out";
         const time = getCurrentIsraelTime();
 
@@ -155,11 +155,11 @@ class Chat {
         if (this.volume) {
             $("#menu-volume .fa-volume-off").css("display", "inline-block");
             $("#menu-volume .fa-volume-up").css("display", "none");
-            $("#menu-volume p").text("كتم التنبيهات");
+            $("#menu-volume p").text(`${i18next.t('mute-notifications')}`);
         } else {
             $("#menu-volume .fa-volume-off").css("display", "none");
             $("#menu-volume .fa-volume-up").css("display", "inline-block");
-            $("#menu-volume p").text("تفعيل التنبيهات");
+            $("#menu-volume p").text(`${i18next.t('turn-on-notifications')}`);
         }
     }
     playIncomingMsgSound() {
@@ -181,21 +181,18 @@ function getCurrentIsraelTime() {
 }
 
 function loadChat() {
-    createWidgetHtml();
-    createChatAndListeners();
-
-    // i18next
-    // .use(i18nextXHRBackend)
-    // .init({
-    //   backend: {
-    //     loadPath: `${process.env.DOMAIN}/langs/${process.env.LANGUAGE}.json`,
-    //     crossDomain: true
-    //   }
-    // }, 
-    // function(err, t) {
-    //     createWidgetHtml();
-    //     createChatAndListeners();
-    // });
+    i18next
+    .use(i18nextXHRBackend)
+    .init({
+      backend: {
+        loadPath: `${process.env.DOMAIN}/langs/${process.env.LANGUAGE}.json`,
+        crossDomain: true
+      }
+    }, 
+    function(err, t) {
+        createWidgetHtml();
+        createChatAndListeners();
+    });
 }
 
 function createChatAndListeners() {
@@ -278,14 +275,14 @@ function createWidgetHtml() {
             '<div id="sound"></div>' +
             '<section id="chat-ended-overlay" class="chat-overlay none full-width">' +
                 '<div id="chat-ended-button">' +
-                    `<p>انتهت المكالمة<br>
-                    انقر لإغلاق الدردشة</p>` +
+                    `<p>${i18next.t('conversation-ended')}<br>
+                        ${i18next.t('click-to-close-chat')}</p>` +
                 '</div>' +
             '</section>' +
             '<section id="chat-header" class="full-width">' +
                 '<div class="flex">' +
                     '<i class="fa fa-comment-o white"></i>' +
-                    `<p id="header-text" class="rtl">توصيل...</p>` +
+                    `<p id="header-text" class="rtl">${i18next.t('connecting')}</p>` +
                 '</div>' +
                 '<div>' +
                     '<i class="fa fa-chevron-down pointer white"></i>' +
@@ -297,22 +294,22 @@ function createWidgetHtml() {
                 '<section id="chat-content">' +
                     '<div id="chat-main" class="rtl">' +
                         '<span id="welcome-time" class="time-general"></span>' +
-                        `<p>سيؤدي إغلاق المحادثة إلى حذف جميع الرسائل.<br>` +
-                        `<br>ستبدأ إعادة فتح المحادثة مع مندوبة أخرى.</p><br>` +
-                        `<p>إحدى ممثلاتنا سوف تتواصل معكِ قريباً.<br></p>` +
+                        `<p>${i18next.t('closing-chat-erase-messages')}.<br>` +
+                        `<br>${i18next.t('reopen-chat-starts-with-new-vol')}.</p><br>` +
+                        `<p>${i18next.t('one-of-our-vols-will-be-with-you-shortly')}.<br></p>` +
                         '<span id="chat-start-time" class="chat-started-text time-general"></span>' +
-                        `<p class="chat-started-text">مرحبًا ، أنا متطوع من مركز المساعدة. يمكنك بدء الدردشة</p>` +
+                        `<p class="chat-started-text">${i18next.t('hello-im-vol-from-the-help-center-you-can-start-typing')}</p>` +
                         '<ul id="chat-history"></ul>' +
                     '</div>' +
                     '<div id="waiting-msg">' +
-                        `<p>أنواع الممثل...</p>` +
+                        `<p>${i18next.t('vol-is-typing')}</p>` +
                     '</div>' +
                 '</section>' +
                 '<section id="chat-message-container" class="full-width">' +
                     '<form action="#" id="chat-form" class="flex">' +
                         '<i class="fa fa-plus fa-lg button-color-disabled"></i>' +
                         '<i class="fa fa-times fa-lg pointer button-color-enabled none"></i>' +
-                        `<input id="chat-message" class="rtl" autocomplete="off" placeholder="اكتب النص هنا""/>` +
+                        `<input id="chat-message" class="rtl" autocomplete="off" placeholder="${i18next.t('type-text-here')}""/>` +
                         '<i class="fa fa-arrow-right fa-lg button-color-disabled""></i>' +
                     '</form>' +
                 '</section>' +
@@ -320,14 +317,14 @@ function createWidgetHtml() {
                     '<div id="menu-content" class="flex">' +
                         '<article id="menu-end-conversation">' +
                             '<div><i class="fa fa-ban fa-lg"></i></div>' +
-                            `<p>إنهاء المكالمة</p>` +
+                            `<p>${i18next.t('end-conversation')}</p>` +
                         '</article>' +
                         '<article id="menu-volume">' +
                             '<div>' +
                                 '<i class="fa fa-volume-off fa-lg"></i>' +
                                 '<i class="fa fa-volume-up fa-lg none"></i>' +
                             '</div>' +
-                            `<p>كتم التنبيهات</p>` +
+                            `<p>${i18next.t('mute-notifications')}</p>` +
                         '</article>' +
                     '</div>' +
                     '<div id="menu-footer">' +
