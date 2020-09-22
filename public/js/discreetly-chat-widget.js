@@ -10,8 +10,7 @@ function loadStyleFiles() {
 
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
-    loadJsScript("https://unpkg.com/i18next/i18next.js");
-    loadJsScript("https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js");
+    loadJsScript(`${process.env.DOMAIN}/langs/${process.env.LANGUAGE}.js`);
     loadJsScript(`${process.env.DOMAIN}/socket.io/socket.io.js`);
     loadJsScript(`${process.env.DOMAIN}/chat.js`);
 }
@@ -22,7 +21,7 @@ function loadStylesheet(url) {
     link.type = 'text/css';
     link.href = url;
 
-    var entry = document.getElementsByTagName('script')[0];
+    let entry = document.getElementsByTagName('script')[0];
     entry.parentNode.insertBefore(link, entry);
 }
 
@@ -31,6 +30,6 @@ function loadJsScript(src) {
     script.type = "text/javascript";
     script.src = src;
 
-    var entry = document.getElementsByTagName('script')[0];
+    let entry = document.getElementsByTagName('script')[0];
     entry.parentNode.insertBefore(script, entry);
 }
