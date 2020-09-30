@@ -12,5 +12,7 @@ const lang = {
     "turnOnNotifications": "Turn on notifications",
     "typeTextHere": "Type text here",
     "vol": "Volunteer",
-    "volIsTyping": "Volunteer is typing..."
+    "volIsTyping": "Volunteer is typing...",
+    "chatNotActiveMessage": "The chat is not active now",
+
 }
