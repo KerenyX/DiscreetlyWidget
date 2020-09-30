@@ -1,16 +1,16 @@
 const lang = {
-    "clickToCloseChat": "לחץ כדי לסגור את הצ'אט",
+    "clickToCloseChat": "לחצי כדי לסגור את הצ'אט",
     "closingChatEraseMessages": "סגירת הצ'אט תמחק את כל ההודעות",
     "connecting": "מתחבר...",
     "conversationEnded": "השיחה הסתיימה",
     "endConversation": "סיום שיחה",
-    "helloImVolFromTheHelpCenterYouCanStartTyping": "שלום, אני מתנדב/ת ממרכז הסיוע. אפשר להתחיל לשוחח",
+    "helloImVolFromTheHelpCenterYouCanStartTyping": "שלום לך, כתבי לי איך אוכל לעזור?",
     "me": "אני",
     "muteNotifications": "השתקת התראות",
-    "oneOfOurVolsWillBeWithYouShortly": "אחד הנציגים שלנו יהיה איתך בקרוב",
-    "reopenChatStartsWithNewVol": "פתיחה מחדש תתחיל צ'אט עם נציג אחר",
+    "oneOfOurVolsWillBeWithYouShortly": "אחת הנציגות שלנו תהיה איתך בהקדם",
+    "reopenChatStartsWithNewVol": "פתיחה מחדש תתחיל צ'אט עם נציגה אחר",
     "turnOnNotifications": "הפעלת התראות",
-    "typeTextHere": "הקלד/י טקסט כאן",
-    "vol": "נציג/ה",
-    "volIsTyping": "הנציג/ה מקליד/ה..."
+    "typeTextHere": "הקלידי טקסט כאן",
+    "vol": "נציגה",
+    "volIsTyping": "הנציגה מקלידה..."
 }
