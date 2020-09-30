@@ -12,5 +12,6 @@ const lang = {
     "turnOnNotifications": "تفعيل التنبيهات",
     "typeTextHere": "اكتب النص هنا",
     "vol": "وكيل",
-    "volIsTyping": "أنواع الممثل..."
+    "volIsTyping": "أنواع الممثل...",
+    "chatNotActiveMessage": "الدردشة غير متوفرة حالياً. ساعات العمل يومياً من 16:00 حتى 22:00"
 }
