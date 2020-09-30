@@ -4,7 +4,7 @@ class Chat {
         this.isAssigned = false;
         this.isTyping = false;
         this.volunteerIsTyping = false;
-        this.volume = true;
+        this.volume = false;
         this.chatDisabled = false;
     }
 
