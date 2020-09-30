@@ -14,6 +14,10 @@ class Chat {
         }
 
         const time = getCurrentIsraelTime();
+        if (time) { //TODO - add a time check per environment about chat activity time
+             this.addMessage(lang.ChatNotActiveMessage, "in")
+        }
+        
         $('#welcome-time').text(time);
 
         $("#chat-container").css("display", "block");
@@ -82,8 +86,11 @@ class Chat {
     }
     chatStarted() {
         this.isAssigned = true;
+        
+        if (this.volume) {
         this.playIncomingMsgSound();
-
+        }
+        
         const time = getCurrentIsraelTime();
         $('#chat-start-time').text(time);
 
