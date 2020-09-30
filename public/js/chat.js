@@ -15,7 +15,7 @@ class Chat {
 
         const time = getCurrentIsraelTime();
         if (time) { //TODO - add a time check per environment about chat activity time
-             this.addMessage(lang.ChatNotActiveMessage, "in")
+             this.addMessage(`${lang.chatNotActiveMessage}`, "in")
         }
         
         $('#welcome-time').text(time);
