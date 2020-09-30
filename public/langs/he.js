@@ -12,5 +12,7 @@ const lang = {
     "turnOnNotifications": "הפעלת התראות",
     "typeTextHere": "הקלידי טקסט כאן",
     "vol": "נציגה",
-    "volIsTyping": "הנציגה מקלידה..."
+    "volIsTyping": "הנציגה מקלידה...",
+    "chatNotActiveMessage": "השירות פעיל רק בימים א-ה בשעות 9:00-14:00",
+    
 }
