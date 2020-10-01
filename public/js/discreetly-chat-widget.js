@@ -6,6 +6,7 @@ window.onload = () => {
 function loadStyleFiles() {
     loadStylesheet("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
     loadStylesheet(`${process.env.DOMAIN}/css/style.min.css`);
+    loadStylesheet(`${process.env.DOMAIN}/css/${process.env.SETTINGS_FILE}.css`);
 }
 
 function loadJsFiles() {

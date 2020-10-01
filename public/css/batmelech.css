@@ -1,0 +1,7 @@
+#discreetly-chat-widget-container #chat-container > #chat-header {
+    background-color: #fc6901;
+}
+
+#discreetly-chat-widget-container #chat-container > #chat-body ul#chat-history li.in {
+    background-color: #fc6901;
+}
