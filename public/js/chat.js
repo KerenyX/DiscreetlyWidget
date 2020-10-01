@@ -92,9 +92,9 @@ class Chat {
 
         $("#chat-main .chat-started-text").css("display", "block");
 
-        /* Enable the chat message buttons */
-        $("#chat-form .fa-cog").addClass("pointer");
-        $("#chat-form .fa-arrow-right").addClass("pointer");
+        /* Enable the chat message buttons and change colors */
+        $("#chat-form .fa-cog").addClass("pointer button-color-enabled").removeClass("button-color-disabled");
+        $("#chat-form .fa-arrow-right").addClass("pointer button-color-enabled").removeClass("button-color-disabled");
         $('#header-text').text(`${lang.vol}`);
     }
     chatEnded() {
