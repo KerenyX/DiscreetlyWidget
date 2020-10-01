@@ -1,12 +1,4 @@
 #open-chat-button {
-    &.kolmila  {
-        background-image: url("../images/chat-enter.png");
-        background-repeat: no-repeat; 
-        background-size: contain;
-        width: 197px;
-        height: 171px;
-    }
-
     &.all {
         font-weight: 500;
         background-color: #61ce70;
@@ -170,16 +162,6 @@
             background-color: #EEEEEE;
             height: 140px;
             padding-top: 1px;
-        }
-
-        #chat-cover-img.kolmila {
-            background-image: url("../images/headerlogo.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 300px;
-            height: 95px;
-            margin-left: 16px;
-            margin-top: 22px;
         }
 
         #chat-main {
