@@ -174,18 +174,20 @@ class Chat {
 }
 
 document.getElementById("open-chat-button").onclick = () => {
-    loadChat();  
+    const workingHours = checkIfWorkingNow();
+
+    if (workingHours) {
+        createWidgetHtml();
+        createChatAndListeners();  
+    } else {
+        // not working now message
+    }
 };
 
 function getCurrentIsraelTime() {
     const options = {timeZone: "Asia/Jerusalem", hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit"}
     const time = new Date().toLocaleString("he-IL", options);
     return time;
-}
-
-function loadChat() {
-    createWidgetHtml();
-    createChatAndListeners();
 }
 
 function createChatAndListeners() {
@@ -332,4 +334,16 @@ function createWidgetHtml() {
 
     var chatContainer = document.getElementById("discreetly-chat-widget-container");
     chatContainer.innerHTML = chatHtml;
+}
+
+function checkIfWorkingNow() {
+    if (!settings.timeLimit) {
+        return true;
+    }
+
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
+    const currentHour = currentDate.getHours();
+    
+    return (settings.days[currentDay] && currentHour >= settings.startTime && currentHour < settings.endTime);
 }
