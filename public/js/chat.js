@@ -53,7 +53,7 @@ class Chat {
         $("#chat-container > #chat-body > #chat-content").animate({ height: "340px"}, 200);
 
         $("#menu-container").css("display", "block");
-        $("#chat-form .fa-plus").css("display", "none");
+        $("#chat-form .fa-cog").css("display", "none");
         $("#chat-form .fa-times").css("display", "initial");
 
         $('#chat-content').animate({ scrollTop: $('#chat-main').prop("scrollHeight") }, 1000);
@@ -63,7 +63,7 @@ class Chat {
 
         setTimeout(() => { 
             $("#menu-container").css("display", "none");
-            $("#chat-form .fa-plus").css("display", "initial");
+            $("#chat-form .fa-cog").css("display", "initial");
             $("#chat-form .fa-times").css("display", "none");
         }, 150);
     }
@@ -93,7 +93,7 @@ class Chat {
         $("#chat-main .chat-started-text").css("display", "block");
 
         /* Enable the chat message buttons */
-        $("#chat-form .fa-plus").addClass("pointer");
+        $("#chat-form .fa-cog").addClass("pointer");
         $("#chat-form .fa-arrow-right").addClass("pointer");
         $('#header-text').text(`${lang.vol}`);
     }
@@ -213,7 +213,7 @@ function createChatAndListeners() {
     $('#chat-form .fa-arrow-right').click(() => {
         chat.sendMessage();
     });
-    $('#chat-form .fa-plus').click(() => {
+    $('#chat-form .fa-cog').click(() => {
         chat.openAdvancedMenu();
     });
     $('#chat-form .fa-times').click(() => {
@@ -300,7 +300,7 @@ function createWidgetHtml() {
                 '</section>' +
                 '<section id="chat-message-container" class="full-width">' +
                     '<form action="#" id="chat-form" class="flex">' +
-                        '<i class="fa fa-plus fa-lg button-color-disabled"></i>' +
+                        '<i class="fa fa-cog fa-lg button-color-disabled"></i>' +
                         '<i class="fa fa-times fa-lg pointer button-color-enabled none"></i>' +
                         `<input id="chat-message" class="rtl" autocomplete="off" placeholder="${lang.typeTextHere}""/>` +
                         '<i class="fa fa-arrow-right fa-lg button-color-disabled""></i>' +
