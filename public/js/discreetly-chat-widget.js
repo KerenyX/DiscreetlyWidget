@@ -11,6 +11,7 @@ function loadStyleFiles() {
 function loadJsFiles() {
     loadJsScript("https://code.jquery.com/jquery-3.5.1.min.js");
     loadJsScript(`${process.env.DOMAIN}/langs/${process.env.LANGUAGE}.js`);
+    loadJsScript(`${process.env.DOMAIN}/settings/${process.env.SETTINGS_FILE}.js`);
     loadJsScript(`${process.env.DOMAIN}/socket.io/socket.io.js`);
     loadJsScript(`${process.env.DOMAIN}/chat.js`);
 }

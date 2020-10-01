@@ -4,7 +4,7 @@ class Chat {
         this.isAssigned = false;
         this.isTyping = false;
         this.volunteerIsTyping = false;
-        this.volume = true;
+        this.volume = settings.notificationDefault;
         this.chatDisabled = false;
     }
 
@@ -82,7 +82,10 @@ class Chat {
     }
     chatStarted() {
         this.isAssigned = true;
-        this.playIncomingMsgSound();
+
+        if (settings.notificationDefault) {
+            this.playIncomingMsgSound();
+        }
 
         const time = getCurrentIsraelTime();
         $('#chat-start-time').text(time);
@@ -311,10 +314,13 @@ function createWidgetHtml() {
                         '</article>' +
                         '<article id="menu-volume">' +
                             '<div>' +
-                                '<i class="fa fa-volume-off fa-lg"></i>' +
-                                '<i class="fa fa-volume-up fa-lg none"></i>' +
+                                `${settings.notificationDefault ? 
+                                    '<i class="fa fa-volume-off fa-lg"></i>' +
+                                    '<i class="fa fa-volume-up fa-lg none"></i>' : 
+                                    '<i class="fa fa-volume-off fa-lg none"></i>' +
+                                    '<i class="fa fa-volume-up fa-lg"></i>'}` +
                             '</div>' +
-                            `<p>${lang.muteNotifications}</p>` +
+                            `<p>` + `${settings.notificationDefault ? lang.muteNotifications : lang.turnOnNotifications}` + `</p>` +
                         '</article>' +
                     '</div>' +
                     '<div id="menu-footer">' +
