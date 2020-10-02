@@ -273,11 +273,11 @@ function createNotAvailableMessage() {
         `<p>${settings.notAvailableMessage || lang.chatNotActiveMessage}</p>` +
         `<button>${lang.ok}</button>`;
 
-    const chatContainer = document.getElementById("discreetly-chat-widget-container");
+    const body = document.body;
     const newDiv = document.createElement("section");
     newDiv.setAttribute("id", "chat-not-available-now-container");
     newDiv.innerHTML = messageHtml;
-    chatContainer.insertAdjacentElement("beforeBegin", newDiv);
+    body.insertAdjacentElement("afterBegin", newDiv);
 
     $("#open-chat-button").css("display", "none");
 }
