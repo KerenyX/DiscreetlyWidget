@@ -13,5 +13,6 @@ const lang = {
     "typeTextHere": "הקלידי טקסט כאן",
     "vol": "נציגה",
     "volIsTyping": "הנציגה מקלידה...",
-    "chatNotActiveMessage": "השירות פעיל רק בימים א-ה בשעות 9:00-14:00"
+    "chatNotActiveMessage": "השירות לא פעיל כרגע",
+    "ok": "אישור"
 }

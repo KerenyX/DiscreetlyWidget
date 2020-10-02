@@ -13,5 +13,6 @@ const lang = {
     "typeTextHere": "Type text here",
     "vol": "Volunteer",
     "volIsTyping": "Volunteer is typing...",
-    "chatNotActiveMessage": "The chat is not active now"
+    "chatNotActiveMessage": "The chat is not active now",
+    "ok": "ok"
 }

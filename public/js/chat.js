@@ -180,7 +180,11 @@ document.getElementById("open-chat-button").onclick = () => {
         createWidgetHtml();
         createChatAndListeners();  
     } else {
-        // not working now message
+        createNotAvailableMessage();
+
+        $("#chat-not-available-now button").click(() => {
+            destroyNotAvailableMessage();
+        });
     }
 };
 
@@ -262,6 +266,31 @@ function createChatAndListeners() {
     chat.socket.on('volunteer is typing', (msg) => {
         chat.showTypingMessage();
     });
+}
+
+function createNotAvailableMessage() {
+    const messageHtml =
+        `<section id="chat-not-available-now">` + 
+            `<p>${settings.notAvailableMessage || lang.chatNotActiveMessage}</p>` +
+            `<button>${lang.ok}</button>` +
+    `</section>`;
+
+    const chatContainer = document.getElementById("discreetly-chat-widget-container");
+    const newDiv = document.createElement("div");
+    newDiv.setAttribute("id", "chat-not-available-now-container");
+    newDiv.innerHTML = messageHtml;
+    chatContainer.insertAdjacentElement("beforeBegin", newDiv);
+
+    $("#open-chat-button").css("display", "none");
+}
+
+function destroyNotAvailableMessage() {
+    const msgContainer = document.getElementById("chat-not-available-now-container");
+    msgContainer.innerHTML = "";
+    msgContainer.remove();
+
+    $("#open-chat-button").css("display", "block");
+    $("#chat-not-available-now button").unbind();
 }
 
 function createWidgetHtml() {

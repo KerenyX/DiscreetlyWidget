@@ -5,3 +5,7 @@
 #discreetly-chat-widget-container #chat-container > #chat-body ul#chat-history li.in {
     background-color: #642698;
 }
+
+#chat-not-available-now {
+    border: 2px solid rgba(100, 38, 152, 0.6);
+}
