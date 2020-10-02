@@ -182,7 +182,7 @@ document.getElementById("open-chat-button").onclick = () => {
     } else {
         createNotAvailableMessage();
 
-        $("#chat-not-available-now button").click(() => {
+        $("#chat-not-available-now-container button").click(() => {
             destroyNotAvailableMessage();
         });
     }
@@ -270,13 +270,11 @@ function createChatAndListeners() {
 
 function createNotAvailableMessage() {
     const messageHtml =
-        `<section id="chat-not-available-now">` + 
-            `<p>${settings.notAvailableMessage || lang.chatNotActiveMessage}</p>` +
-            `<button>${lang.ok}</button>` +
-    `</section>`;
+        `<p>${settings.notAvailableMessage || lang.chatNotActiveMessage}</p>` +
+        `<button>${lang.ok}</button>`;
 
     const chatContainer = document.getElementById("discreetly-chat-widget-container");
-    const newDiv = document.createElement("div");
+    const newDiv = document.createElement("section");
     newDiv.setAttribute("id", "chat-not-available-now-container");
     newDiv.innerHTML = messageHtml;
     chatContainer.insertAdjacentElement("beforeBegin", newDiv);
