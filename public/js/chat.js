@@ -181,10 +181,6 @@ document.getElementById("open-chat-button").onclick = () => {
         createChatAndListeners();  
     } else {
         createNotAvailableMessage();
-
-        $("#chat-not-available-now-container button").click(() => {
-            destroyNotAvailableMessage();
-        });
     }
 };
 
@@ -280,6 +276,10 @@ function createNotAvailableMessage() {
     body.insertAdjacentElement("afterBegin", newDiv);
 
     $("#open-chat-button").css("display", "none");
+
+    $("#chat-not-available-now-container button").click(() => {
+        destroyNotAvailableMessage();
+    });
 }
 
 function destroyNotAvailableMessage() {
