@@ -87,13 +87,13 @@ class Chat {
             this.playIncomingMsgSound();
         }
 
-        this.addMessage(`${lang.helloImVolFromTheHelpCenterYouCanStartTyping}`, "in");
-        /*
-        const time = getCurrentIsraelTime();
-        $('#chat-start-time').text(time);
-
-        $("#chat-main .chat-started-text").css("display", "block");
-        */ 
+        if (settings.autoHelloFromVol) {
+            this.addMessage(`${lang.helloImVolFromTheHelpCenterYouCanStartTyping}`, "in");
+        } else {
+            const time = getCurrentIsraelTime();
+            $('#chat-start-time').text(time);
+            $("#chat-main .chat-started-text").css("display", "block");
+        }
         
         /* Enable the chat message buttons and change colors */
         $("#chat-form .fa-cog").addClass("pointer button-color-enabled").removeClass("button-color-disabled");
