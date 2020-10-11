@@ -87,11 +87,14 @@ class Chat {
             this.playIncomingMsgSound();
         }
 
+        this.addMessage(`${lang.helloImVolFromTheHelpCenterYouCanStartTyping}`, "in");
+        /*
         const time = getCurrentIsraelTime();
         $('#chat-start-time').text(time);
 
         $("#chat-main .chat-started-text").css("display", "block");
-
+        */ 
+        
         /* Enable the chat message buttons and change colors */
         $("#chat-form .fa-cog").addClass("pointer button-color-enabled").removeClass("button-color-disabled");
         $("#chat-form .fa-arrow-right").addClass("pointer button-color-enabled").removeClass("button-color-disabled");
