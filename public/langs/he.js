@@ -8,7 +8,7 @@ const lang = {
     "me": "אני",
     "muteNotifications": "השתקת התראות",
     "oneOfOurVolsWillBeWithYouShortly": "אחת הנציגות שלנו תהיה איתך בהקדם",
-    "reopenChatStartsWithNewVol": "פתיחה מחדש תתחיל צ'אט עם נציגה אחר",
+    "reopenChatStartsWithNewVol": "פתיחה מחדש תתחיל צ'אט עם נציגה אחרת",
     "turnOnNotifications": "הפעלת התראות",
     "typeTextHere": "הקלידי טקסט כאן",
     "vol": "נציגה",
