@@ -250,6 +250,12 @@ function createChatAndListeners() {
         return false;
     });
 
+    if (settings.autoMinimizeOnBlur) {
+        $(window).blur(() => {
+            chat.minimizeChat();
+        });
+    }
+
     chat.socket.on('out chat message', (msg) => {
         chat.addMessage(msg, "out");
     });

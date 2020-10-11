@@ -5,5 +5,6 @@ const settings = {
     endTime: 22,
     days: [1, 1, 1, 1, 1, 1, 1],
     notAvailableMessage: "", /* Takes the message from the lang struct */
-    autoHelloFromVol: true
+    autoHelloFromVol: true,
+    autoMinimizeOnBlur: true
 }
