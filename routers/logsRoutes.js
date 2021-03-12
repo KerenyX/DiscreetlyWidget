@@ -6,7 +6,7 @@ const logsController = require('../controllers/logsController.js');
 const parentPath = path.join(__dirname, '../', '/public/html/');
 
 logsRouter.get('', (req, res) => {
-    res.sendFile(parentPath + 'logs.html');
+    res.sendFile(parentPath + 'logs.html');   
 });
 logsRouter.post('/chat', (req, res) => {
     logsController.getMessagesByDates(req, res);
